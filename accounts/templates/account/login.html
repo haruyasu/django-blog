@@ -9,7 +9,7 @@
         <form method="post" class="form-auth">
             {% csrf_token %}
             <div class="form-label-group">
-                {% render_field form.login class="form-control" placeholder="アカウント名" %}
+                {% render_field form.login class="form-control" placeholder="ユーザー名" %}
             </div>
             <div class="form-label-group">
                 {% render_field form.password class="form-control" placeholder="パスワード" %}

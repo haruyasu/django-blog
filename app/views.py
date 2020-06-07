@@ -2,6 +2,7 @@ from django.views.generic import View
 from django.shortcuts import render, redirect
 from .models import Post
 from .forms import PostForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class IndexView(View):
@@ -20,7 +21,7 @@ class PostDetailView(View):
         })
 
 
-class CreatePostView(View):
+class CreatePostView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         form = PostForm(request.POST or None)
 
@@ -44,7 +45,7 @@ class CreatePostView(View):
         })
 
 
-class PostEditView(View):
+class PostEditView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         post_data = Post.objects.get(id=self.kwargs['pk'])
         form = PostForm(
@@ -73,9 +74,13 @@ class PostEditView(View):
             'form': form
         })
 
-class PostDeleteView(View):
+
+class PostDeleteView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'app/post_delete.html')
+        post_data = Post.objects.get(id=self.kwargs['pk'])
+        return render(request, 'app/post_delete.html', {
+            'post_data': post_data
+        })
 
     def post(self, request, *args, **kwargs):
         post_data = Post.objects.get(id=self.kwargs['pk'])
