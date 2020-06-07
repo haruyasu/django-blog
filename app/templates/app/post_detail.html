@@ -1,13 +1,15 @@
 {% extends "app/base.html" %}
 
 {% block content %}
-
-<p>{{ post_data.author }}</p>
-<p>{{ post_data.title }}</p>
-<p>{{ post_data.content }}</p>
-<p>{{ post_data.created }}</p>
-
-<a class="btn btn-success" href="{% url 'post_edit' post_data.id %}">編集する</a>
-<a class="btn btn-danger" href="{% url 'post_delete' post_data.id %}">削除する</a>
+<h2 class="my-4">{{ post_data.title }}</h2>
+<hr>
+<p>{{ post_data.created }} by {{ post_data.author }}</p>
+<hr>
+<p>{{ post_data.content|linebreaksbr }}</p>
+<hr>
+<div class="d-flex">
+    <a class="btn btn-warning mr-2" href="{% url 'post_edit' post_data.id %}">編集する</a>
+    <a class="btn btn-danger" href="{% url 'post_delete' post_data.id %}">削除する</a>    
+</div>
 
 {% endblock %}

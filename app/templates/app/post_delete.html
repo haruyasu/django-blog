@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<p>削除してもよろしいですか？</p>
+<h2 class="my-4">削除してもよろしいですか？</h2>
 <form method="post">
     {% csrf_token %}
     <button class="btn btn-danger" type="submit">削除する</button>

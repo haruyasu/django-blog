@@ -48,3 +48,8 @@ main {
 .form-control:focus {
     box-shadow: none;
 }
+
+/* 投稿 */
+.formpost {
+    margin-bottom: 1rem;
+}

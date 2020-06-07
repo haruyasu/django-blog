@@ -19,13 +19,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/">ホーム</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'about' %}">プロフィール</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'post_new' %}">投稿</a>
-                </li>
                 {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'post_new' %}">投稿</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">ログアウト</a>
                     </li>

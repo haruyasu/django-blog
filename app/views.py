@@ -12,11 +12,6 @@ class IndexView(View):
         })
 
 
-class AboutView(View):
-    def get(self, request, *args, **kwargs):
-        return render(request, 'app/about.html')
-
-
 class PostDetailView(View):
     def get(self, request, *args, **kwargs):
         post_data = Post.objects.get(id=self.kwargs['pk'])
