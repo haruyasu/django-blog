@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+
+<p>削除してもよろしいですか？</p>
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">削除する</button>
+</form>
+
+{% endblock %}

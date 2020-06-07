@@ -1,0 +1,13 @@
+{% extends "app/base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<form method="post">
+    {% csrf_token %}
+    {% render_field form.title class="form-control" placeholder="タイトル" %}
+    {% render_field form.content class="form-control" placeholder="内容" %}
+    <button class="btn btn-warning" type="submit">登録する</button>
+</form>
+
+{% endblock %}

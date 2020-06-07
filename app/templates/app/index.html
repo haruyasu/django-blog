@@ -3,7 +3,8 @@
 {% block content %}
 
 {% for post in post_data %}
-<p>{{ post }}</p>
+    <a href="{% url 'post_detail' post.id %}"><p>{{ post.title }}</p></a>
+    <p>{{ post.content|truncatechars:50 }}</p>
 {% endfor %}
 
 {% endblock %}
