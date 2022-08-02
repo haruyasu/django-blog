@@ -1,29 +1,5 @@
-# Django Blogチュートリアル
+# はじめてのブログサイト(Django)
 
-このチュートリアルは、Django初心者向けのWebアプリケーション開発チュートリアルです。
+[YouTube](https://www.youtube.com/watch?v=NeGGafSMov8&list=PLoSZs76tLtJihI7ME-qhzDpBOQy4yILcW)
 
-このチュートリアルを実施すると、いちからWebアプリケーションを開発できるようになります。
-
-まずはDjangoでシンプルなブログサイトを構築します。
-
-## 目標
-
-下記を学習していきます。
-
-* Djangoとは？
-* モデルの作り方
-* URLの作り方
-* ビューの作り方
-* フォームの作り方
-* テンプレートの作り方
-
-## 機能
-
-* ブログ投稿 
-* ブログ編集
-* ブログ削除
-* ログイン
-* ログアウト
-* サインアップ
-
-[ブログチュートリアル](https://note.com/hathle/n/n7a1cb24695aa)
+![](https://res.cloudinary.com/dhaciqd0v/image/upload/v1659354208/LINE/Frame_213_mjfkbs.png)
